@@ -13,7 +13,7 @@ WHITE = "\033[97m"
 
 END = "\033[0m"
 EMAIL= "email@gmail.com"
-URL=""
+URL="http://127.0.0.1:5500/Aula25/login.html"
 
 
 senhas=[
@@ -48,7 +48,7 @@ for senha in senhas:
     campo_senha.send_keys(senha)
     print(f"[TESTE]" 
     f"tentando: {senha}")
-    botao=navegador.find_element(By.TAG_NAME,"buttom")
+    botao=navegador.find_element(By.TAG_NAME,"button")
     botao.click()
     time.sleep(0.7)
     mensagem=navegador.find_element(By.ID,"mensagem").text
